@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  webapi:
+    build: .
+    ports:
+      - "8080:8080"
+    # volumes:
+    #   - ".:/projects"
+    tty: true
+    networks:
+      - aws_local_vpc
+
+networks:
+    aws_local_vpc:
+      external: true
