@@ -3,7 +3,7 @@ package api
 import (
 	"net/http"
 
-	"generated/model"
+	"github.com/hexaforce/webapi/model"
 	"github.com/julienschmidt/httprouter"
 	"github.com/smallnest/gen/dbmeta"
 )

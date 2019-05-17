@@ -1,13 +1,12 @@
 package main
 
 import (
-	"encoding/json"
-	"io/ioutil"
+	"log"
 	"net/http"
-	"strconv"
 
+	"github.com/hexaforce/webapi/api"
 	"github.com/jinzhu/gorm"
-	"github.com/julienschmidt/httprouter"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 func main() {
@@ -16,9 +15,9 @@ func main() {
 	if err != nil {
 		panic("failed to connect database: " + err.Error())
 	}
-	defer db.Close()
+	defer DB.Close()
 
-    router := api.ConfigRouter(DB)
+	router := api.ConfigRouter(DB)
 	log.Fatal(http.ListenAndServe(":8080", router))
-	
+
 }
