@@ -34,6 +34,7 @@ steps:
   settings:
     repo: ${account_id}.dkr.ecr.ap-northeast-1.amazonaws.com/webapi
     registry: ${account_id}.dkr.ecr.ap-northeast-1.amazonaws.com
+    region: ap-northeast-1
     access_key:
       from_secret: access_key
     secret_key:
