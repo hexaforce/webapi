@@ -6,7 +6,7 @@ platform:
   arch: amd64
 
 steps:
-- name: vet
+- name: Vet examines source code.
   pull: always
   image: golang:1.12.5-stretch
   commands:
@@ -17,7 +17,7 @@ steps:
   - name: gopath
     path: /go
 
-- name: test
+- name: Testing source code.
   pull: always
   image: golang:1.12.5-stretch
   commands:
@@ -28,7 +28,7 @@ steps:
   - name: gopath
     path: /go
 
-- name: publish  
+- name: Build and publish images to ECR.  
   image: plugins/ecr
   environment:
   settings:
