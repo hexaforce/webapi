@@ -30,9 +30,12 @@ steps:
 
 - name: publish  
   image: plugins/ecr
+  environment:
+    ACCOUNT_ID:
+      from_secret: account_id
   settings:
-    repo: account_id.dkr.ecr.ap-northeast-1.amazonaws.com/webapi
-    registry: account_id.dkr.ecr.ap-northeast-1.amazonaws.com
+    repo: ${ACCOUNT_ID}.dkr.ecr.ap-northeast-1.amazonaws.com/webapi
+    registry: ${ACCOUNT_ID}.dkr.ecr.ap-northeast-1.amazonaws.com
 
 volumes:
 - name: gopath
