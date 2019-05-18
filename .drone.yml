@@ -34,8 +34,10 @@ steps:
   settings:
     repo: ${account_id}.dkr.ecr.ap-northeast-1.amazonaws.com/webapi
     registry: ${account_id}.dkr.ecr.ap-northeast-1.amazonaws.com
-    access_key: ${access_key}
-    secret_key: ${secret_key}
+    access_key:
+      from_secret: access_key
+    secret_key:
+      from_secret: secret_key
 
 volumes:
 - name: gopath
