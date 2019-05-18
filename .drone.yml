@@ -8,7 +8,7 @@ platform:
 steps:
 - name: vet
   pull: always
-  image: golang:1.11
+  image: golang:alpine
   commands:
   - go vet ./...
   environment:
@@ -19,7 +19,7 @@ steps:
 
 - name: test
   pull: always
-  image: golang:1.11
+  image: golang:alpine
   commands:
   - go test -cover ./...
   environment:
