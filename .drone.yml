@@ -28,6 +28,12 @@ steps:
   - name: gopath
     path: /go
 
+- name: publish  
+  image: plugins/ecr
+  settings:
+    repo: account_id.dkr.ecr.ap-northeast-1.amazonaws.com/webapi
+    registry: account_id.dkr.ecr.ap-northeast-1.amazonaws.com
+
 volumes:
 - name: gopath
   temp: {}
