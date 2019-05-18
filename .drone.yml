@@ -32,15 +32,13 @@ steps:
   image: plugins/ecr
   environment:
   settings:
-    repo: webapi
     registry: ${account_id}.dkr.ecr.ap-northeast-1.amazonaws.com
+    repo: webapi
     region: ap-northeast-1
     access_key:
       from_secret: access_key
     secret_key:
       from_secret: secret_key
-    tags:
-      - 1
 
 volumes:
 - name: gopath
