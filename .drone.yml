@@ -39,6 +39,10 @@ steps:
       from_secret: access_key
     secret_key:
       from_secret: secret_key
+    tags:
+      - latest
+      - 1.0.1
+      - 1.0
 
 volumes:
 - name: gopath
