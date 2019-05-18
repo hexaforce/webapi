@@ -30,6 +30,7 @@ steps:
 
 - name: publish  
   image: plugins/ecr
+  secrets: [aws_access_key_id, aws_secret_access_key]
   environment:
     ACCOUNT_ID:
       from_secret: account_id
